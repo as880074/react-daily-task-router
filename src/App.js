@@ -1,7 +1,9 @@
 import './App.css';
 import {
   HashRouter,
-  NavLink,
+  NavLink, 
+  Route, 
+  Routes
 } from 'react-router-dom';
 
 const Todo = () => {
@@ -34,7 +36,12 @@ function App() {
           </NavLink>
         </div>
         {/* Routes, Route 練習區 */}
-        {/* 練習區 */}
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/Register" element={<Register />} />
+          <Route path="/Todo" element={<Todo />} />
+        </Routes>
+           {/* 練習區 */}
       </HashRouter>
     </div>
   );
